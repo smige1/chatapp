@@ -5,22 +5,22 @@ import { useRouter } from "next/router";
 import Loader from "@/components/Loader";
 import LeftNav from "@/components/LeftNav";
 import Chats from "@/components/Chats";
+import Chat from "@/components/Chat";
+import { useChatContext } from "@/context/chatContext";
 const Home = () => {
     const router = useRouter();
     const { signOut, currentUser, isLoading } = useAuth();
+    const { data } = useChatContext();
 
     useEffect(() => {
         if (!isLoading && !currentUser) {
-            router.push("/Login");
+            router.push("/ogin");
         }
     }, [currentUser, isLoading]);
 
     return !currentUser ? (
         <Loader />
     ) : (
-        // <div>
-        //     <button onClick={signOut}>Sign Out</button>
-        // </div>
         <div className="bg-c1 flex h-[100vh]">
             <div className="flex w-full shrink-0">
                 <LeftNav />
@@ -31,7 +31,7 @@ const Home = () => {
                             <Chats />
                         </div>
                     </div>
-                    <div>Chat</div>
+                    {data.user && <Chat />}
                 </div>
             </div>
         </div>

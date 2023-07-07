@@ -84,43 +84,43 @@ const Login = () => {
     return isLoading || (!isLoading && currentUser) ? (
         <Loader />
     ) : (
-        <div className="h-[100vh] flex justify-center items-center bg-c1">
+        <div className="h-[100vh] text-center sm:text-left flex justify-center items-center bg-c1">
             <ToastMessage />
-            <div className="flex items-center flex-col">
-                <div className="text-center">
-                    <div className="text-4xl font-bold">
+            <div className="flex items-center flex-col text-center sm:text-left">
+                <div className="text-center sm:text-left">
+                    <div className="text-4xl font-bold text-center sm:text-left">
                         Login to Your Account
                     </div>
-                    <div className="mt-3 text-c3">
+                    <div className="mt-3 text-c3 text-center sm:text-left">
                         Connect and chat with anyone, anywhere
                     </div>
                 </div>
 
-                <div className="flex items-center gap-2 w-full mt-10 mb-5">
+                <div className="flex items-center gap-2 w-full mt-10 mb-5 text-center sm:text-left">
                     <div
-                        className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-1/2 h-14 rounded-md cursor-pointer p-[1px]"
+                        className="bg-gradient-to-r text-center sm:text-left from-indigo-500 via-purple-500 to-pink-500 w-1/2 h-14 rounded-md cursor-pointer p-[1px]"
                         onClick={signInWithGoogle}
                     >
-                        <div className="flex items-center justify-center gap-3 text-white font-semibold bg-c1 w-full h-full rounded-md">
+                        <div className="flex items-center text-center sm:text-left justify-center gap-3 text-white font-semibold bg-c1 w-full h-full rounded-md">
                             <IoLogoGoogle size={24} />
                             <span>Login with Google</span>
                         </div>
                     </div>
 
                     <div
-                        className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-1/2 h-14 rounded-md cursor-pointer p-[1px]"
+                        className="bg-gradient-to-r from-indigo-500 text-center sm:text-left via-purple-500 to-pink-500 w-1/2 h-14 rounded-md cursor-pointer p-[1px]"
                         onClick={signInWithFacebook}
                     >
-                        <div className="flex items-center justify-center gap-3 text-white font-semibold bg-c1 w-full h-full rounded-md">
+                        <div className="flex items-center justify-center gap-3 text-center sm:text-left text-white font-semibold bg-c1 w-full h-full rounded-md">
                             <IoLogoFacebook size={24} />
                             <span>Login with Facebook</span>
                         </div>
                     </div>
                 </div>
 
-                <div className="flex items-center gap-1">
-                    <span className="w-5 h-[1px] bg-c3"></span>
-                    <span className="text-c3 font-semibold">OR</span>
+                <div className="flex items-center gap-1 text-center sm:text-left">
+                    <span className="w-5 h-[1px] bg-c3 text-center sm:text-left"></span>
+                    <span className="text-c3 font-semibold text-center sm:text-left">OR</span>
                     <span className="w-5 h-[1px] bg-c3"></span>
                 </div>
 

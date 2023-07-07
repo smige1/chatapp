@@ -5,6 +5,7 @@ import { useChatContext } from "@/context/chatContext";
 import Avatar from "../Avatar";
 import { db } from "@/firebase/firebase";
 import {
+    deleteField,
     doc,
     getDoc,
     serverTimestamp,
@@ -64,6 +65,9 @@ const UsersPopup = (props) => {
                 });
             } else {
                 // chat document exists
+                await updateDoc(doc(db, "userChats", currentUser.uid), {
+                    [combinedId + ".chatDeleted"]: deleteField(),
+                });
             }
 
             dispatch({ type: "CHANGE_USER", payload: user });

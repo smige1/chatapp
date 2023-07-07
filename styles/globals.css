@@ -12,6 +12,7 @@
 
 body {
     color: white;
+    
 }
 
 * {
@@ -19,6 +20,8 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 .glass-effect {
     background: rgba(0, 0, 0, 0.35);
