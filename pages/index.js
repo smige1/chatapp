@@ -14,7 +14,7 @@ const Home = () => {
 
     useEffect(() => {
         if (!isLoading && !currentUser) {
-            router.push("/ogin");
+            router.push("/Login");
         }
     }, [currentUser, isLoading]);
 
